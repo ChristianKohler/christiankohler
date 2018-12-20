@@ -1,0 +1,27 @@
+{
+  "name": "christiankohler",
+  "version": "1.0.0",
+  "description": "A personal card for Christian Kohler",
+  "main": "./src/card.js",
+  "bin": {
+    "christiankohler": "./bin/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/christiankohler/christiankohler.git"
+  },
+  "scripts": {
+    "build": "ncc build src/index.js -o bin"
+  },
+  "keywords": [],
+  "author": "Christian Kohler",
+  "license": "MIT",
+  "dependencies": {
+    "boxen": "^2.1.0",
+    "chalk": "^2.4.1"
+  },
+  "devDependencies": {
+    "@zeit/ncc": "^0.7.0",
+    "standard": "^12.0.1"
+  }
+}
