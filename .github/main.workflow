@@ -4,13 +4,13 @@ workflow "Build and Publish" {
 }
 
 action "Build" {
-  uses = "actions/npm@master"
+  uses = "actions/npm@e7aaefe"
   runs = "build"
 }
 
 action "Publish" {
   needs = "Build"
-  uses = "actions/npm@master"
+  uses = "actions/npm@e7aaefe"
   args = "publish --access public"
   env = {}
   secrets = ["NPM_AUTH_TOKEN"]
