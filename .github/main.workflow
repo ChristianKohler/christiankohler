@@ -18,5 +18,5 @@ workflow "Build and Publish" {
 
 action "GitHub Action for npm" {
   uses = "actions/npm@e7aaefe"
-  runs = "build"
+  runs = "run build"
 }
