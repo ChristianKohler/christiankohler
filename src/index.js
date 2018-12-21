@@ -37,4 +37,4 @@ const carding = `${data.labelCard}  ${data.npx}`
 // Put all our output together into a single variable so we can use boxen effectively
 const output = heading + newline + newline + working + newline + twittering + newline + githubing + newline + newline + carding
 
-console.log(chalk.green(boxen(output, options)))
+console.log(chalk.red(boxen(output, options)))
