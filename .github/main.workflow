@@ -3,7 +3,13 @@ workflow "Build and Publish" {
   resolves = ["Build"]
 }
 
+action "Install" {
+  uses = "actions/npm@e7aaefe"
+  runs = "install"
+}
+
 action "Build" {
   uses = "actions/npm@e7aaefe"
+  needs = ["Install"]
   runs = "build"
 }
