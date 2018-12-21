@@ -1,6 +1,6 @@
 workflow "Build and Publish" {
   on = "push"
-  resolves = ["Build"]
+  resolves = ["Publish"]
 }
 
 action "Install" {
@@ -12,4 +12,12 @@ action "Build" {
   needs = "Install"
   uses = "actions/npm@master"
   args = "build"
+}
+
+action "Publish" {
+  needs = "Build"
+  uses = "actions/npm@master"
+  args = "publish --access public"
+  secrets = ["NPM_AUTH_TOKEN"]
+  needs = ["Build"]
 }
